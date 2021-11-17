@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:alpha="1">
+        <ImageView
+            android:id="@+id/scan"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_baseline_qr_code_scanner_24"/>
+        <EditText
+            android:id="@+id/edit1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:inputType="text"
+            android:textColorHint="@android:color/holo_blue_light"
+            android:hint="Enter serial number"
+            android:textColor="@color/UIBlue2"
+            android:fontFamily="sans-serif-light"/>
+
+<!--        <EditText-->
+<!--            android:id="@+id/edit2"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:inputType="text"-->
+<!--            android:hint="Enter model no."-->
+<!--            android:textColor="@color/UIBlue"-->
+<!--            android:fontFamily="sans-serif-light"/>-->
+        <LinearLayout
+            android:id="@+id/btnrellayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:background="@color/UIBlue2"
+                android:fontFamily="sans-serif-light"
+                android:text="Submit"
+                android:layout_weight=".5"
+                android:layout_marginRight="16dp"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:layout_marginLeft="10dp"/>
+
+
+            <Button
+                android:id="@+id/btncancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:layout_weight=".5"
+                android:background="@color/UIBlue2"
+                android:fontFamily="sans-serif-light"
+                android:text="Cancel"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/blue_bg1"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:minHeight="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="@android:color/white"
+            android:background="?attr/colorPrimary">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_weight=".40"
+                android:layout_marginTop="15dp">
+
+
+                <TextView
+                    android:id="@+id/action_bar_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="PROMAX"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5dp"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-light" />
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="My Profile"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/isd"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="70dp"
+                android:background="@drawable/et2"
+                android:drawableLeft="@drawable/user"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:hint="ISD Name"
+                android:inputType="textCapWords"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@android:color/holo_blue_light"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="270dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="150dp" />
+
+
+            <EditText
+                android:id="@+id/isd_mob"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/isd"
+                android:background="@drawable/et2"
+                android:drawableLeft="@drawable/phone_number"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:hint="Reg. Mob. No"
+                android:inputType="phone"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@android:color/holo_blue_light"
+
+                android:textSize="12sp" />
+
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/isd_mob"
+                android:background="@drawable/et2"
+                android:drawableLeft="@drawable/email"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:hint="Email Id"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@android:color/holo_blue_light"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="270dp"
+                android:layout_height="1px"
+                android:layout_marginTop="210dp" />
+
+
+            <View
+                android:layout_width="270dp"
+                android:layout_height="1px"
+                android:layout_marginTop="210dp" />
+
+
+            <EditText
+                android:id="@+id/bank_name"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/email"
+                android:background="@drawable/et2"                android:drawableLeft="@drawable/account"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:hint="Bank Name"
+                android:inputType="text"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="270dp"
+                android:layout_height="1px"
+                android:layout_marginTop="210dp" />
+
+
+            <EditText
+                android:id="@+id/bank_ac"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/bank_name"
+                android:background="@drawable/et2"
+                android:drawableLeft="@drawable/account_number_key"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:hint="Bank A/C No."
+                android:inputType="number"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@android:color/holo_blue_light"
+                android:textSize="12sp" />
+
+
+            <View
+                android:layout_width="270dp"
+                android:layout_height="1px"
+                android:layout_marginTop="210dp" />
+
+
+            <EditText
+                android:id="@+id/ifsc"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/bank_ac"
+                android:background="@drawable/et2"
+                android:drawableLeft="@drawable/ifsc"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:hint="IFSC Code"
+                android:inputType="text"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@android:color/holo_blue_light"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="270dp"
+                android:layout_height="1px"
+                android:layout_marginTop="210dp" />
+
+
+            <EditText
+                android:id="@+id/upi"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/ifsc"
+                android:background="@drawable/et2"
+                android:drawableLeft="@drawable/upi2"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:hint="UPI Id"
+                android:inputType="text"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@android:color/holo_blue_light"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="270dp"
+                android:layout_height="1px"
+                android:layout_marginTop="280dp" />
+
+            <EditText
+                android:id="@+id/pan"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/upi"
+                android:background="@drawable/et2"
+                android:drawableLeft="@drawable/pan"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:hint="Pancard No."
+                android:inputType="text"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@android:color/holo_blue_light"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="270dp"
+                android:layout_height="1px"
+                android:layout_marginTop="350dp" />
+
+            <ImageButton
+                android:id="@+id/pan_cam"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/upi"
+                android:layout_marginLeft="280dp"
+                android:background="@drawable/ic_baseline_photo_camera_24"
+                android:padding="3dp"
+                android:text="Upload"
+                android:textSize="11dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/adhar"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/pan"
+                android:background="@drawable/et2"
+                android:drawableLeft="@drawable/adhar"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:hint="Adhar No."
+                android:inputType="number"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@android:color/holo_blue_light"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="300dp"
+                android:layout_height="1px"
+                android:layout_marginTop="420dp" />
+
+            <ImageButton
+                android:id="@+id/adhar_cam"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/pan"
+                android:layout_marginLeft="280dp"
+                android:background="@drawable/ic_baseline_photo_camera_24"
+                android:padding="3dp"
+                android:textColor="@color/white"
+                android:textSize="11dp"
+                android:textStyle="bold" />
+
+
+<!--            <CheckBox-->
+<!--                android:id="@+id/terms_conditions"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="7dp"-->
+<!--                android:text="@string/terms_conditions"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="14sp" />-->
+
+
+            <TextView
+                android:id="@+id/cheque"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/adhar"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:hint="Upload Cheque :"
+                android:inputType="text"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="15sp"
+                android:visibility="visible"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="270dp"
+                android:layout_height="1px"
+                android:visibility="visible"
+                android:layout_marginTop="350dp" />
+
+            <ImageButton
+                android:id="@+id/cheque_cam"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/adhar"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_baseline_photo_camera_24"
+                android:padding="3dp"
+                android:text="Upload"
+                android:textSize="11dp"
+                android:visibility="visible"
+                android:textStyle="bold" />
+
+
+            <Button
+                android:id="@+id/kyc_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cheque_cam"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/btn_bg2"
+                android:text="Submit"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>

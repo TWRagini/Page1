@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar12"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp">
+        </androidx.appcompat.widget.Toolbar>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:orientation="horizontal"
+                android:weightSum="1.5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:gravity="center"
+                    android:layout_weight=".65">
+
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/logo1"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/action"
+                        />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:gravity="start"
+                    android:layout_weight=".40"
+                    android:layout_marginTop="15dp">
+
+
+                    <TextView
+                        android:id="@+id/action_bar_back"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_gravity="start"
+                        android:text="FleetView 2.0"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="5dp"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:fontFamily="sans-serif-light" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:gravity="end"
+                    android:layout_weight=".45"
+                    android:weightSum="1">
+
+
+                    <ru.nikartm.support.ImageBadgeView
+                        android:id="@+id/ibv_icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center"
+                        android:src="@drawable/notification1"
+                        app:ibv_badgeColor="#00ACC1"
+                        android:layout_margin="12dp"
+                        app:ibv_badgeLimitValue="false"
+                        app:ibv_badgeTextColor="#ffffff"
+                        app:ibv_badgeTextSize="9sp"
+                        app:ibv_badgeTextStyle="bold"
+                        android:layout_weight=".5"
+                        app:ibv_fixedBadgeRadius="9dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/fab"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/home"
+                        android:layout_alignParentRight="true"
+                        android:layout_weight=".5"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+

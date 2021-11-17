@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity"
+    android:layout_centerHorizontal="true"
+    android:layout_gravity="center"
+    android:background="@drawable/blue_bg1">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar_layout"
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_layout"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Customer Invoice Upload"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:textSize="20sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/add_product_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="25dp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:layout_gravity="start"
+                android:layout_marginStart="50dp"
+                android:background="@color/UIBlue2"
+                android:text="Add Product">
+
+            </Button>
+
+            <EditText
+                android:background="@drawable/et"
+                android:id="@+id/cust_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="40dp"
+                android:hint="Customer Name"
+                android:textColor="@color/UIBlue2"
+                android:padding="12dp"
+                android:singleLine="true"
+                android:textColorHint="@android:color/holo_blue_light"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:background="@drawable/et"
+                android:id="@+id/mob_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="40dp"
+                android:hint="Mobile Number"
+                android:textColor="@color/UIBlue2"
+                android:textColorHint="@android:color/holo_blue_light"
+                android:padding="12dp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:background="@drawable/et"
+                android:id="@+id/invoice_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/UIBlue2"
+                android:textColorHint="@android:color/holo_blue_light"
+                android:layout_marginRight="40dp"
+                android:hint="Invoice Number"
+                android:padding="12dp"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical">
+                <HorizontalScrollView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:fillViewport="true"
+                    android:scrollbars="none">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:context=".MainActivity">
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="30dp">
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="70dp"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/border"
+                                    android:text="SrNo"
+                                    android:textAlignment="center"
+                                    android:backgroundTint="@color/UIBlue2"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/border"
+                                    android:text="Product Cat"
+                                    android:textAlignment="center"
+                                    android:backgroundTint="@color/UIBlue2"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/border"
+                                    android:text="Sub Cat"
+                                    android:backgroundTint="@color/UIBlue2"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/border"
+                                    android:text="Model"
+                                    android:textAlignment="center"
+                                    android:backgroundTint="@color/UIBlue2"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/border"
+                                    android:text="Serial No"
+                                    android:textAlignment="center"
+                                    android:backgroundTint="@color/UIBlue2"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="70dp"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/border"
+                                    android:text="Incentive"
+                                    android:textAlignment="center"
+                                    android:backgroundTint="@color/UIBlue2"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:layout_width="70dp"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/border"
+                                    android:text="Action"
+                                    android:textAlignment="center"
+                                    android:backgroundTint="@color/UIBlue2"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+                            </TableRow>
+                        </TableLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/incentive_recyclerview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="30dp">
+                        </androidx.recyclerview.widget.RecyclerView>
+                    </RelativeLayout>
+                </HorizontalScrollView>
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/l1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="Invoice"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:textStyle="bold">
+                </TextView>
+                <ImageButton
+                    android:id="@+id/img_invoice"
+                    android:layout_width="54dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/cc2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:text="ISD Code"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:textStyle="bold">
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/invoice_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:background="@drawable/btn_bg"
+                    android:text="Submit">
+                </Button>
+
+                <Button android:id="@+id/cancel_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/btn_bg"
+                    android:text="Cancel"> </Button>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>

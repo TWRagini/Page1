@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:layout_centerHorizontal="true"
+    android:layout_gravity="center"
+    android:background="@drawable/blue_bg1">
+
+    <include layout="@layout/toolbar_layout"
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/i_lin1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_layout"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Incentive"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="40dp"
+            android:padding="12dp"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:text="--"
+            android:textColor="@color/UIBlue2"
+            android:background="@drawable/et"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/i_lin1"
+        android:layout_marginTop="23dp"
+        android:background="#e0e0e0"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/i_lin1"
+        android:id="@+id/linearDate"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/fromdateId"
+            android:paddingTop="15dp"
+            android:paddingBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:textAlignment="center"
+            android:hint="From Date"
+            android:textStyle="bold"
+            android:textColorHint="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:textSize="13dp"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/calendar"
+            android:gravity="center" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#e0e0e0" />
+
+        <TextView
+            android:id="@+id/toDateId"
+            android:paddingTop="15dp"
+            android:paddingBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:fontFamily="sans-serif-light"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:drawableLeft="@drawable/calendar"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:hint="To Date"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white" />
+
+
+        <Button
+            android:id="@+id/incentiveSubmit"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:fontFamily="sans-serif-light"
+            android:background="@color/UIBlue2"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
+
+
+    </LinearLayout>
+    <View
+        android:layout_below="@+id/linearDate"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerVertical="true"
+        android:background="#e0e0e0"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/i_lin2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearDate"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/UIBlue2"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="17sp"
+            android:textStyle="italic"
+            android:text="Swipe left to see more details"
+            android:layout_below="@id/linearDate"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            />
+
+        <ScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="vertical">
+            <HorizontalScrollView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                android:scrollbars="none">
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:context=".MainActivity"
+                    >
+
+                    <TableLayout
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+                        <TableRow android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content">
+                            <TextView
+                                android:textColor="@color/white"
+                                android:textAlignment="center"
+                                android:text="SrNo"
+                                android:background="@drawable/border"
+                                android:textStyle="bold"
+                                android:layout_width="70dp"
+                                android:backgroundTint="@color/UIBlue2"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                />
+                            <TextView
+
+                                android:textColor="@color/white"
+                                android:textAlignment="center"
+                                android:text="SerialNo"
+                                android:background="@drawable/border"
+                                android:textStyle="bold"
+                                android:layout_width="100dp"
+                                android:backgroundTint="@color/UIBlue2"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                />
+                            <TextView
+                                android:textColor="@color/white"
+                                android:text="Model"
+                                android:textAlignment="center"
+                                android:background="@drawable/border"
+                                android:textStyle="bold"
+                                android:layout_width="100dp"
+                                android:backgroundTint="@color/UIBlue2"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                />
+                            <TextView
+                                android:textColor="@color/white"
+                                android:textAlignment="center"
+                                android:background="@drawable/border"
+                                android:text="Invoice"
+                                android:textStyle="bold"
+                                android:layout_width="100dp"
+                                android:backgroundTint="@color/UIBlue2"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                />
+                            <TextView
+                                android:textColor="@color/white"
+                                android:textAlignment="center"
+                                android:background="@drawable/border"
+                                android:textStyle="bold"
+                                android:text="Saledate"
+                                android:layout_width="100dp"
+                                android:backgroundTint="@color/UIBlue2"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                />
+                            <TextView
+                                android:textColor="@color/white"
+                                android:textAlignment="center"
+                                android:background="@drawable/border"
+                                android:textStyle="bold"
+                                android:text="Incentive"
+                                android:layout_width="70dp"
+                                android:backgroundTint="@color/UIBlue2"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                />
+                            <TextView
+                                android:textColor="@color/white"
+                                android:textAlignment="center"
+                                android:background="@drawable/border"
+                                android:textStyle="bold"
+                                android:text="Status"
+                                android:layout_width="70dp"
+                                android:backgroundTint="@color/UIBlue2"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                />
+                        </TableRow>
+                    </TableLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/incentive_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="30dp"
+                        android:layout_height="wrap_content">
+                    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+                </RelativeLayout>
+            </HorizontalScrollView>
+        </ScrollView>
+
+    </LinearLayout>
+</RelativeLayout>

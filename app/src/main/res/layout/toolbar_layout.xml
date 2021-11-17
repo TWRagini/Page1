@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="?attr/colorPrimary">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:layout_weight=".40"
+            android:layout_marginTop="15dp">
+
+
+            <TextView
+                android:id="@+id/action_bar_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="PROMAX"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:fontFamily="sans-serif-light" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="center"
+            android:layout_marginEnd="10dp"
+           >
+            <ru.nikartm.support.ImageBadgeView
+                android:id="@+id/ibv_icon2"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_baseline_notifications_24"
+                app:ibv_badgeColor="#00ACC1"
+                app:ibv_badgeLimitValue="false"
+                app:ibv_badgeTextColor="#ffffff"
+                app:ibv_fixedBadgeRadius="9dp"
+                />
+
+            <ru.nikartm.support.ImageBadgeView
+                android:id="@+id/ibv_icon3"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/home"
+                app:ibv_badgeColor="#00ACC1"
+                app:ibv_badgeLimitValue="false"
+                app:ibv_badgeTextColor="#ffffff"
+                app:ibv_fixedBadgeRadius="9dp"
+                />
+            <ru.nikartm.support.ImageBadgeView
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/ic_baseline_exit_to_app_24"
+                app:ibv_badgeColor="#00ACC1"
+                app:ibv_badgeLimitValue="false"
+                app:ibv_badgeTextColor="#ffffff"
+                app:ibv_fixedBadgeRadius="9dp"
+                />
+
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+</LinearLayout>
